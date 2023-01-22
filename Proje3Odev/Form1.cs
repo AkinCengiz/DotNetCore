@@ -8,19 +8,16 @@ namespace Proje3Odev
         {
             InitializeComponent();
         }
-
         private EmployeeManager employeeManager = new EmployeeManager();
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadEmployee();
         }
-
         public void LoadEmployee()
         {
             dgrwCustomers.DataSource = null;
             dgrwCustomers.DataSource = employeeManager.GetAll();
         }
-
         private void btnEmployeeAdd_Click(object sender, EventArgs e)
         {
             Employee employee = new Employee()
@@ -36,7 +33,6 @@ namespace Proje3Odev
             LoadEmployee();
 
         }
-
         public void Clear()
         {
             tbxEmployeeCity.Clear();
